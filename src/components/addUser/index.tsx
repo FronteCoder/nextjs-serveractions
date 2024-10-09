@@ -10,6 +10,8 @@ import { Label } from "../ui/label";
 import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
 import { useRouter } from "next/navigation";
 import { initialUserForm } from "@/utils";
+export const runtime = 'edge';
+
 const formSchema = z.object({
   firstname: z.string().min(2, {
     message: "First Name must be at least 2 characters.",
@@ -23,6 +25,7 @@ const formSchema = z.object({
     .gte(1000000000, { message: "Mobile No should be of 10 digits" })
     .lt(10000000000, { message: "Mobile No should be of 10 digits" }),
 });
+
 export default function AddUser({ userList }: any) {
   const router=useRouter();
   const [isDialogOpen, setDialogOpen] = useState(false);

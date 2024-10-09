@@ -1,6 +1,6 @@
-
 import UserManagement from "./user-management/page";
-export const runtime='edge'
+export const runtime = 'edge';
+
 
 export default function Root(){
   

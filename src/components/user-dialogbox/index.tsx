@@ -20,6 +20,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "../ui/button";
 
 import { addUserFormControls, initialUserForm } from "@/utils/index";
+export const runtime = 'edge';
+
 
 export default function DialogBox({
   isDialogOpen,

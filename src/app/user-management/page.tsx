@@ -1,5 +1,6 @@
 import AddUser from "@/components/addUser";
 import { fetchUser } from "@/server";
+export const runtime = 'edge';
 
 export default async function UserManagement(){
     const listOfUsers=await fetchUser();
